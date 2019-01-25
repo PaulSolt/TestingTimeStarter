@@ -12,7 +12,10 @@
 		BD2890F821FB60770042A341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2890F621FB60770042A341 /* Main.storyboard */; };
 		BD2890FA21FB60780042A341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2890F921FB60780042A341 /* Assets.xcassets */; };
 		BD2890FD21FB60780042A341 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2890FB21FB60780042A341 /* LaunchScreen.storyboard */; };
-		BD28910821FB60780042A341 /* TestingTimeTDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28910721FB60780042A341 /* TestingTimeTDDTests.swift */; };
+		BD28911321FB60AA0042A341 /* TrialPeriodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28911221FB60AA0042A341 /* TrialPeriodTests.swift */; };
+		BD28911621FB61D60042A341 /* TimeTraveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28911521FB61D60042A341 /* TimeTraveler.swift */; };
+		BD28911821FB623F0042A341 /* TrialPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28911721FB623F0042A341 /* TrialPeriod.swift */; };
+		BD28911921FB623F0042A341 /* TrialPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28911721FB623F0042A341 /* TrialPeriod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +37,11 @@
 		BD2890FC21FB60780042A341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD2890FE21FB60780042A341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD28910321FB60780042A341 /* TestingTimeTDDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingTimeTDDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD28910721FB60780042A341 /* TestingTimeTDDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingTimeTDDTests.swift; sourceTree = "<group>"; };
 		BD28910921FB60780042A341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD28911221FB60AA0042A341 /* TrialPeriodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialPeriodTests.swift; sourceTree = "<group>"; };
+		BD28911521FB61D60042A341 /* TimeTraveler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTraveler.swift; sourceTree = "<group>"; };
+		BD28911721FB623F0042A341 /* TrialPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialPeriod.swift; sourceTree = "<group>"; };
+		BD28911A21FB62C30042A341 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 		BD2890E621FB60770042A341 = {
 			isa = PBXGroup;
 			children = (
+				BD28911A21FB62C30042A341 /* README.md */,
 				BD2890F121FB60770042A341 /* TestingTimeTDD */,
 				BD28910621FB60780042A341 /* TestingTimeTDDTests */,
 				BD2890F021FB60770042A341 /* Products */,
@@ -79,6 +86,7 @@
 			children = (
 				BD2890F221FB60770042A341 /* AppDelegate.swift */,
 				BD2890F421FB60770042A341 /* ViewController.swift */,
+				BD28911721FB623F0042A341 /* TrialPeriod.swift */,
 				BD2890F621FB60770042A341 /* Main.storyboard */,
 				BD2890F921FB60780042A341 /* Assets.xcassets */,
 				BD2890FB21FB60780042A341 /* LaunchScreen.storyboard */,
@@ -90,7 +98,8 @@
 		BD28910621FB60780042A341 /* TestingTimeTDDTests */ = {
 			isa = PBXGroup;
 			children = (
-				BD28910721FB60780042A341 /* TestingTimeTDDTests.swift */,
+				BD28911221FB60AA0042A341 /* TrialPeriodTests.swift */,
+				BD28911521FB61D60042A341 /* TimeTraveler.swift */,
 				BD28910921FB60780042A341 /* Info.plist */,
 			);
 			path = TestingTimeTDDTests;
@@ -149,7 +158,6 @@
 					};
 					BD28910221FB60780042A341 = {
 						CreatedOnToolsVersion = 10.1;
-						TestTargetID = BD2890EE21FB60770042A341;
 					};
 				};
 			};
@@ -199,6 +207,7 @@
 			files = (
 				BD2890F521FB60770042A341 /* ViewController.swift in Sources */,
 				BD2890F321FB60770042A341 /* AppDelegate.swift in Sources */,
+				BD28911821FB623F0042A341 /* TrialPeriod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD28910821FB60780042A341 /* TestingTimeTDDTests.swift in Sources */,
+				BD28911321FB60AA0042A341 /* TrialPeriodTests.swift in Sources */,
+				BD28911621FB61D60042A341 /* TimeTraveler.swift in Sources */,
+				BD28911921FB623F0042A341 /* TrialPeriod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +407,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LCRLD36TZ6;
 				INFOPLIST_FILE = TestingTimeTDDTests/Info.plist;
@@ -409,7 +419,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestingTimeTDD.app/TestingTimeTDD";
 			};
 			name = Debug;
 		};
@@ -417,7 +426,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LCRLD36TZ6;
 				INFOPLIST_FILE = TestingTimeTDDTests/Info.plist;
@@ -430,7 +438,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestingTimeTDD.app/TestingTimeTDD";
 			};
 			name = Release;
 		};
