@@ -2,6 +2,17 @@
 
 An exploration into test driven development with dependency injection.
 
+## Key Take Aways
+
+1. You will learn how to write unit test code using test driven development.
+2. You will learn how to test code that deals with dates and time.
+
+## Writing Tests for Time is Hard
+
+In industry you want to test your business logic, and that's hard if everything in your code is referencing dates.
+
+By using dependency injection, with the help of a time traveler, you'll learn how to write more easily tested code, so that you don't have to wait days to know if code is right.
+
 ## Design and Exploration
 
 Test driven development follows design and exploration. If you don't know how to use the APIs, you need to explore before you can design the high level direction.
@@ -42,6 +53,8 @@ You can disable this behavior, by editing your Unit Test target's General proper
 1. Project Properties > General > Targets > TestingTimeTDD > General
 2. Set "Host Application" to None
 
+NOTE: All source files must be added to the Unit Test Target
+
 ## 3 Laws of TDD
 
 Uncle Bob's 3 Laws of TDD
@@ -79,9 +92,19 @@ Generally your tests should have one assertion, however for clarity you may want
         XCTAssertEqual(expected, actual)
     }
 
-As you refactor, you can simply tests down to less lines of code by leveraging the setUp() method.
+As you refactor, you can simply tests down to less lines of code by leveraging the `setUp()` method.
 
 Using this model as a guide helps you structure tests that are easy to read.
+
+## Ideas for Tests
+
+    func testTrialInstallDateIsSetOnStart()
+    func testDurationInDaysIs7()
+    func testExpiredDate()
+    func testTrialNotExpiredAfter0Days()
+    func testTrialNotExpiredAfter7Days()
+    func testTrialExpiresAfter21Days()
+    func testResetChangesDateToCurrentTime()
 
 ## References
 
