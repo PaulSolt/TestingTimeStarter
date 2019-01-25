@@ -15,8 +15,17 @@ class TrialPeriodTests: XCTestCase {
 
     // All test functions start with the word "test"
     
-    func testTimeTrial() {
+    func testArrangeActAssert() {
+        // Arrange
+        let x = 20
+        let y = 40
+        let expected = 60
         
+        // Act
+        let actual = x + y
+        
+        // Assert
+        XCTAssertEqual(expected, actual)
     }
 
 }
