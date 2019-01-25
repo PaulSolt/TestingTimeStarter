@@ -1,6 +1,6 @@
 #  Testing Time TDD
 
-An exploration into test driven development.
+An exploration into test driven development with dependency injection.
 
 ## Design and Exploration
 
@@ -42,3 +42,43 @@ You can disable this behavior, by editing your Unit Test target's General proper
 1. Project Properties > General > Targets > TestingTimeTDD > General
 2. Set "Host Application" to None
 
+## 3 Laws of TDD
+
+Uncle Bob's 3 Laws of TDD
+
+1. You must write a failing test before you write any production code.
+2. You must not write more of a test than is sufficient to fail, or fail to compile.
+3. You must not write more production code than is sufficient to make the currently failing test pass.
+
+## Red Green Refactor
+
+1. **Red**: Create a unit tests that fails.
+2. **Green**: Write production code that makes that test pass.
+3. **Refactor**: Clean up the mess you just made.
+
+## One Failing Test
+
+You should only have one test failing at a time, and you should not refactor when tests are failing.
+
+If one of your tests cannot pass because you need to refactor, comment out the test, cleanup the logic, make sure the previous tests pass, and then make changes to fix the new test pass.
+
+## Arrange Act Assert (AAA)
+
+Generally your tests should have one assertion, however for clarity you may want to add more to help the reader understand what's being tested.
+
+    func testArrangeActAssert() {
+        // Arrange
+        let x = 20
+        let y = 40
+        let expected = 60
+
+        // Act
+        let actual = x + y
+
+        // Assert
+        XCTAssertEqual(expected, actual)
+    }
+
+As you refactor, you can simply tests down to less lines of code by leveraging the setUp() method.
+
+Using this model as a guide helps you structure tests that are easy to read.
