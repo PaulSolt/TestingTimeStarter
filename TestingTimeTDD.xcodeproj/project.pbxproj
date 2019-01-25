@@ -16,6 +16,7 @@
 		BD28911621FB61D60042A341 /* TimeTraveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28911521FB61D60042A341 /* TimeTraveler.swift */; };
 		BD28911821FB623F0042A341 /* TrialPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28911721FB623F0042A341 /* TrialPeriod.swift */; };
 		BD28911921FB623F0042A341 /* TrialPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28911721FB623F0042A341 /* TrialPeriod.swift */; };
+		BD2AB2BE21FBAC8E00EBDBBB /* Testing Time Lesson.md in Resources */ = {isa = PBXBuildFile; fileRef = BD2AB2BD21FBAC8E00EBDBBB /* Testing Time Lesson.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		BD28911521FB61D60042A341 /* TimeTraveler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTraveler.swift; sourceTree = "<group>"; };
 		BD28911721FB623F0042A341 /* TrialPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialPeriod.swift; sourceTree = "<group>"; };
 		BD28911A21FB62C30042A341 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		BD2AB2BD21FBAC8E00EBDBBB /* Testing Time Lesson.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Testing Time Lesson.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				BD28911A21FB62C30042A341 /* README.md */,
+				BD2AB2BD21FBAC8E00EBDBBB /* Testing Time Lesson.md */,
 				BD2890F121FB60770042A341 /* TestingTimeTDD */,
 				BD28910621FB60780042A341 /* TestingTimeTDDTests */,
 				BD2890F021FB60770042A341 /* Products */,
@@ -187,6 +190,7 @@
 			files = (
 				BD2890FD21FB60780042A341 /* LaunchScreen.storyboard in Resources */,
 				BD2890FA21FB60780042A341 /* Assets.xcassets in Resources */,
+				BD2AB2BE21FBAC8E00EBDBBB /* Testing Time Lesson.md in Resources */,
 				BD2890F821FB60770042A341 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
