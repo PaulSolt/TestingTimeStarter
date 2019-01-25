@@ -10,24 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    //        let trial = TrialPeriod()
+    let trial = TrialPeriod()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+            
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         // Demo
-        showTrialDialogWithExpiration(Date())
+//        showTrialDialogWithExpiration(Date())
         
-//        if trial.isExpired() {
-//            showPurchaseDialog()
-//        } else {
-//        showTrialDialogWithExpiration(trial.dateExpired)
-//        }
+        if trial.isExpired() {
+            showPurchaseDialog()
+        } else {
+            showTrialDialogWithExpiration(trial.dateExpired)
+        }
 
     }
 

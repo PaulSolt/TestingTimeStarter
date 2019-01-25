@@ -8,6 +8,8 @@
 
 import Foundation
 
+// John Sundell
+
 class TimeTraveler {
     var date: Date
     
