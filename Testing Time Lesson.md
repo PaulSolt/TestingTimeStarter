@@ -135,14 +135,14 @@ Cleanup and remove print statements
 
 But we can't create TrialPeriod without TimeTraveler ... so we create a time traveler and notice repeated code.
 
-func testDefaultDurationIs7Days() {
-    let expected = 7
-    let trial = TrialPeriod(dateGenerator: timeTraveler.generateDate)
-    
-    let actual = trial.durationInDays
-    
-    XCTAssertEqual(expected, actual)
-}
+	func testDefaultDurationIs7Days() {
+	    let expected = 7
+	    let trial = TrialPeriod(dateGenerator: timeTraveler.generateDate)
+	    
+	    let actual = trial.durationInDays
+	    
+	    XCTAssertEqual(expected, actual)
+	}
 
 
 ## 8. Add the Stub and Initialize It
@@ -188,7 +188,7 @@ Copy from 2nd test
     var timeTraveler: TimeTraveler!
     var trial: TrialPeriod!
 
-setUp runs for every unit test, so that we always start with a fresh set of objects.
+`setUp` runs for every unit test, so that we always start with a fresh set of objects.
 
     override func setUp() {
         super.setUp()
@@ -303,7 +303,19 @@ Fix dateGenerator to use date.init
     }
 
 
-## 18. Test With More Confidence
+## Try It Again
+
+Try doing the exercise following the lesson without looking, just refer to the `TimePeriod` interface.
+
+If you need more practice with the Date APIs or Unit Tests, create a sample project to play.
+
+## Challenges
+
+Extend the project by adding more functionality and tests to make sure it works.
+
+If you don't know how to use these APIs, try the code in a sample project or playground.
+
+### 1. Challenge: Test With More Confidence
 
 Test changing the duration, and verifying it expires when we expect.
 
@@ -311,10 +323,37 @@ Caught several bugs when I was writing this the second time with tests, that I h
 
     func testTrialExpiresAfter21Days()
 
-Add a new method
+
+### 2. Challenge: Add a resetTrial() method
+
+Make the trial period reset to the current day.
 
     func resetTrial()
 
 And test it with the timeTraveler
 
     func testResetChangesDateToCurrentTime()
+
+### 3. Make the Trial Expire at Midnight 
+
+Make the trial period expire at midnight Local Time on the 7th Day.
+
+Update any previous tests so that this new logic works as expected.
+
+### 4. Save and Load Time
+
+Add support to save and load time.
+
+1. Save the time using `Codable` to disk in the app's "Documents" directory on iOS.
+
+2. Reload time on init().
+
+3. Write test code to verify your cleanup code worked using `FileManager`
+
+4. Cleanup any files created during the test in the tearDown() method
+
+		override func tearDown() { 
+			super.tearDown()
+			// Remove files
+		}
+
