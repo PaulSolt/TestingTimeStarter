@@ -82,3 +82,12 @@ Generally your tests should have one assertion, however for clarity you may want
 As you refactor, you can simply tests down to less lines of code by leveraging the setUp() method.
 
 Using this model as a guide helps you structure tests that are easy to read.
+
+## References
+
+* [3 Rules of TDD](http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd) 
+* [Try the bowling game kata](http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd)
+* [Bowling Game (Objective-C/Swift)](https://qualitycoding.org/tdd-kata/)
+* [Cycles of TDD](https://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html)
+* [Date and Time Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/DatesAndTimes/DatesAndTimes.html#//apple_ref/doc/uid/10000039i)
+* [Date Math is Hard](https://www.atomicbird.com/blog/date-math-is-hard-lets-do-it-tomorrow)
