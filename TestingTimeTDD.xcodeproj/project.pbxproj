@@ -14,8 +14,6 @@
 		BD2890FD21FB60780042A341 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2890FB21FB60780042A341 /* LaunchScreen.storyboard */; };
 		BD28911321FB60AA0042A341 /* TrialPeriodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28911221FB60AA0042A341 /* TrialPeriodTests.swift */; };
 		BD28911621FB61D60042A341 /* TimeTraveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28911521FB61D60042A341 /* TimeTraveler.swift */; };
-		BD28911821FB623F0042A341 /* TrialPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28911721FB623F0042A341 /* TrialPeriod.swift */; };
-		BD28911921FB623F0042A341 /* TrialPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28911721FB623F0042A341 /* TrialPeriod.swift */; };
 		BD2AB2BE21FBAC8E00EBDBBB /* Testing Time Lesson.md in Resources */ = {isa = PBXBuildFile; fileRef = BD2AB2BD21FBAC8E00EBDBBB /* Testing Time Lesson.md */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +39,6 @@
 		BD28910921FB60780042A341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD28911221FB60AA0042A341 /* TrialPeriodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialPeriodTests.swift; sourceTree = "<group>"; };
 		BD28911521FB61D60042A341 /* TimeTraveler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTraveler.swift; sourceTree = "<group>"; };
-		BD28911721FB623F0042A341 /* TrialPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialPeriod.swift; sourceTree = "<group>"; };
 		BD28911A21FB62C30042A341 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		BD2AB2BD21FBAC8E00EBDBBB /* Testing Time Lesson.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Testing Time Lesson.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +86,6 @@
 			children = (
 				BD2890F221FB60770042A341 /* AppDelegate.swift */,
 				BD2890F421FB60770042A341 /* ViewController.swift */,
-				BD28911721FB623F0042A341 /* TrialPeriod.swift */,
 				BD2890F621FB60770042A341 /* Main.storyboard */,
 				BD2890F921FB60780042A341 /* Assets.xcassets */,
 				BD2890FB21FB60780042A341 /* LaunchScreen.storyboard */,
@@ -211,7 +207,6 @@
 			files = (
 				BD2890F521FB60770042A341 /* ViewController.swift in Sources */,
 				BD2890F321FB60770042A341 /* AppDelegate.swift in Sources */,
-				BD28911821FB623F0042A341 /* TrialPeriod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +216,6 @@
 			files = (
 				BD28911321FB60AA0042A341 /* TrialPeriodTests.swift in Sources */,
 				BD28911621FB61D60042A341 /* TimeTraveler.swift in Sources */,
-				BD28911921FB623F0042A341 /* TrialPeriod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -278,9 +278,13 @@ Refactor method
 
 ## 14 Too Much Code, Let's Extract to a Class
 
-Move `class TrialPeriod` to TrialPeriod.swift
+1. Create a new code file called TrialPeriod.swift
 
-Build and run, verify unit tests still pass (add to unit test target if it fails to find symbols)
+2. Move `class TrialPeriod` to TrialPeriod.swift
+
+3. Build and run, verify unit tests still pass (add to unit test target if it fails to find symbols)
+
+4. For logic tests (Host Application unchecked), make sure to add all source files to your Unit Test Target
 
 ## 15. Test Trial Is Not Expired on Start
 
