@@ -1,5 +1,22 @@
 # Testing Time Code Lesson
 
+This lesson will guide you through the steps required to do Test Driven Development with date logic.
+
+It uses [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection), so that you can literally time travel and test your app in the future. This allows you to make your tests very fast, since you won't have to wait days to test the core logic — you can test in milliseconds. 
+
+Use this exercise as a Code Kata to practice dependency injection, and dealing with date logic.
+
+You can extend the tests to include support for more features as well.
+
+* Try the [Bowling Game Kata in Swift or Objective-C](https://qualitycoding.org/tdd-kata/), based on [Uncle Bob's Java based Code Kata](http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata).
+* Read [John Sundell's post on time traveling](https://www.swiftbysundell.com/posts/time-traveling-in-swift-unit-tests) to get more insight into how it works.
+
+Time to start, the steps that I take in the video will mirror the code steps below. Try and follow along with the video, and then try it again without looking. 
+
+## Fast Tests
+
+For fast tests you'll want to disable "Host Application" testing in your Unit Test Properties.
+
 ## 1. Test Trial Period
 
 	func testTrialPeriod() {
@@ -55,18 +72,24 @@ Compiler error is a failure (red)
 
 output
 
-Expected: 570126870.167193
-Actual: 570126870.167146
+	Expected: 570126870.167193
+	Actual: 570126870.167146
+
+Date is very precise and differs by nanoseconds.
+
+When you test exact times in tests, you either need to provide the exact same Date object, or you need to write code that's more robust with respect to time.
+
+You might consider Date objects within 1 second, or within 60 seconds to be equivalent. 
 
 ## 5. Use the Time Traveler
 
-Create a typealias
+Create a typealias, to make the intent clear. You could also call this a `Clock`.
 
 	typealias DateGenerator = () -> Date
 
 Store a reference to the date generator
 
-typealias DateGenerator = () -> Date
+	typealias DateGenerator = () -> Date
 
 	class TrialPeriod {
 	    var dateInstalled: Date
@@ -77,6 +100,8 @@ typealias DateGenerator = () -> Date
 	        self.dateGenerator = dateGenerator
 	    }
 	}
+
+Add `@escaping` to the `dataGenerator` parameter, since the stored function can execute after the scope of the init method.
 
 Use the dateGenerator to create the date
 
@@ -133,10 +158,12 @@ Cleanup and remove print statements
 	}
 
 
-But we can't create TrialPeriod without TimeTraveler ... so we create a time traveler and notice repeated code.
+But we can't create `TrialPeriod` without `TimeTraveler`, which needs to get a `Date` object.
 
 	func testDefaultDurationIs7Days() {
 	    let expected = 7
+	    let date = Date()
+	    let timeTraveler = TimeTraveler(date: date)
 	    let trial = TrialPeriod(dateGenerator: timeTraveler.generateDate)
 	    
 	    let actual = trial.durationInDays
@@ -144,6 +171,9 @@ But we can't create TrialPeriod without TimeTraveler ... so we create a time tra
 	    XCTAssertEqual(expected, actual)
 	}
 
+... so we create a time traveler and notice the repeated code between our first two tests. 
+
+After the test passes, you'll want to clean it up so that you don't repeat yourself.
 
 ## 8. Add the Stub and Initialize It
 
@@ -160,13 +190,10 @@ But we can't create TrialPeriod without TimeTraveler ... so we create a time tra
 	    }
 	}
 
-Set it to 0, so that it fails
-
-Run the test, see the red
-
-Fix it to 7
-
-Run the test, see the green
+1. Set it to `0`, so that it fails
+2. Run the test, see the red
+3. Fix it to `7`
+4. Run the test, see the green
 
 ## 9. Refactor the Magic Number
 
@@ -182,13 +209,17 @@ Run the test, and verify it still passes
 
 ## 10. Too much redundant code (DRY: Don't Repeat Yourself)
 
-Copy from 2nd test
+Extract the repeated three lines of logic from the 2nd test.
+
+You'll leverage the `setUp()` method to clear the slate for each test, so that they can run independently.
+
+At the top of the Test class add these lines (Copy from 2nd test).
 
     var date: Date!
     var timeTraveler: TimeTraveler!
     var trial: TrialPeriod!
 
-`setUp` runs for every unit test, so that we always start with a fresh set of objects.
+The `setUp()` method runs for every unit test, so that we always start with a fresh set of objects.
 
     override func setUp() {
         super.setUp()
@@ -198,15 +229,15 @@ Copy from 2nd test
         trial = TrialPeriod(dateGenerator: timeTraveler.generateDate)
     }
 
-Collapse the method
+Refactor and collapse the 2nd test method
 
     func testDefaultDurationIs7Days() {        
         XCTAssertEqual(7, trial.durationInDays)
     }
 
-Previous test had too much noise, and can be more concise.
+The previous test had too much noise that got in the way of the actual test., and can be more concise.
 
-Fix the first test
+Now refactor and fix the first test, and make sure the test name is meaningful.
 
     func testTrialPeriod() {
         XCTAssertEqual(date, trial.dateInstalled)
@@ -284,9 +315,11 @@ Implement the logic
 
 ## 17. Uncomment trialPeriod in ViewController
 
+Uncomment the line in ViewController.swift
+
     let trial = TrialPeriod()
 
-and
+Uncomment the trial methods, and make the trial dialog use the `trial.dateExpired`.
 
         if trial.isExpired() {
             showPurchaseDialog()
@@ -303,11 +336,19 @@ Fix dateGenerator to use date.init
     }
 
 
+## Congrats!
+
+You've created your first unit test for testing time, and you've learned some of the thought process behind test driven development.
+
+It takes practice to learn how to test production code, but the more you practice, the easier it will be to see how to write testable code.
+
 ## Try It Again
 
 Try doing the exercise following the lesson without looking, just refer to the `TimePeriod` interface.
 
 If you need more practice with the Date APIs or Unit Tests, create a sample project to play.
+
+Practice writing the `TimeTraveler` class from scratch, and step through the code using a debugger to see how it works.
 
 ## Challenges
 
