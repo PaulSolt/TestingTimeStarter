@@ -48,22 +48,6 @@ class TrialPeriodTests: XCTestCase {
     }
     
     // All test functions start with the word "test"
-
-//    func testTrialPeriod() {
-//        // Arrange
-//        let expected = Date()
-//        let timeTraveler = TimeTraveler(date: expected)
-//        let trial = TrialPeriod(dateGenerator: timeTraveler.generateDate)
-//
-//        // Act
-//        let actualDate = trial.dateInstalled
-//
-//        print("Expected: \(expected.timeIntervalSinceReferenceDate)")
-//        print("Actual: \(actualDate.timeIntervalSinceReferenceDate)")
-//
-//        // Assert
-//        XCTAssertEqual(expected, actualDate)
-//    }
     
     func testTrialPeriodDateInstalledIsToday() {
         XCTAssertEqual(date, trial.dateInstalled)
