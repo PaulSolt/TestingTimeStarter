@@ -11,22 +11,35 @@ import XCTest
 // Test code in your main module when dynamically linking unit tests
 //@testable import TestingTimeTDD
 
+typealias DateGenerator = () -> Date
 
+class TrialPeriod {
+    var dateInstalled: Date
+    var dateGenerator: DateGenerator
+    
+    init(dateGenerator: @escaping DateGenerator) {
+        self.dateInstalled = dateGenerator()
+        self.dateGenerator = dateGenerator
+    }
+}
 
 class TrialPeriodTests: XCTestCase {
 
     // All test functions start with the word "test"
 
-    func testArrangeActAssert() {
+    func testTrialPeriod() {
         // Arrange
-        let x = 20
-        let y = 40
-        let expected = 60
+        let expected = Date()
+        let timeTraveler = TimeTraveler(date: expected)
+        let trial = TrialPeriod(dateGenerator: timeTraveler.generateDate)
         
         // Act
-        let actual = x + y
+        let actualDate = trial.dateInstalled
+        
+        print("Expected: \(expected.timeIntervalSinceReferenceDate)")
+        print("Actual: \(actualDate.timeIntervalSinceReferenceDate)")
         
         // Assert
-        XCTAssertEqual(expected, actual)
+        XCTAssertEqual(expected, actualDate)
     }
 }
