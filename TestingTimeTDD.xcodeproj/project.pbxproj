@@ -15,6 +15,8 @@
 		BD28911321FB60AA0042A341 /* TrialPeriodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28911221FB60AA0042A341 /* TrialPeriodTests.swift */; };
 		BD28911621FB61D60042A341 /* TimeTraveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28911521FB61D60042A341 /* TimeTraveler.swift */; };
 		BD2AB2BE21FBAC8E00EBDBBB /* Testing Time Lesson.md in Resources */ = {isa = PBXBuildFile; fileRef = BD2AB2BD21FBAC8E00EBDBBB /* Testing Time Lesson.md */; };
+		BDE677B12202370E00803C6C /* TrialPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE677B02202370E00803C6C /* TrialPeriod.swift */; };
+		BDE677B22202374D00803C6C /* TrialPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE677B02202370E00803C6C /* TrialPeriod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,7 @@
 		BD28911521FB61D60042A341 /* TimeTraveler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTraveler.swift; sourceTree = "<group>"; };
 		BD28911A21FB62C30042A341 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		BD2AB2BD21FBAC8E00EBDBBB /* Testing Time Lesson.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Testing Time Lesson.md"; sourceTree = "<group>"; };
+		BDE677B02202370E00803C6C /* TrialPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialPeriod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,7 @@
 				BD2890F921FB60780042A341 /* Assets.xcassets */,
 				BD2890FB21FB60780042A341 /* LaunchScreen.storyboard */,
 				BD2890FE21FB60780042A341 /* Info.plist */,
+				BDE677B02202370E00803C6C /* TrialPeriod.swift */,
 			);
 			path = TestingTimeTDD;
 			sourceTree = "<group>";
@@ -205,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE677B12202370E00803C6C /* TrialPeriod.swift in Sources */,
 				BD2890F521FB60770042A341 /* ViewController.swift in Sources */,
 				BD2890F321FB60770042A341 /* AppDelegate.swift in Sources */,
 			);
@@ -214,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE677B22202374D00803C6C /* TrialPeriod.swift in Sources */,
 				BD28911321FB60AA0042A341 /* TrialPeriodTests.swift in Sources */,
 				BD28911621FB61D60042A341 /* TimeTraveler.swift in Sources */,
 			);

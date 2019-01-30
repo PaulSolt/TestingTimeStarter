@@ -11,28 +11,6 @@ import XCTest
 // Test code in your main module when dynamically linking unit tests
 //@testable import TestingTimeTDD
 
-typealias DateGenerator = () -> Date
-
-class TrialPeriod {
-    static let defaultDuration = 7
-    
-    var dateInstalled: Date
-    var dateGenerator: DateGenerator
-    var durationInDays: Int
-    var dateExpired: Date {
-        return Calendar.current.date(byAdding: .day,
-                                     value: TrialPeriod.defaultDuration,
-                                     to: dateInstalled)!
-    }
-    
-    
-    init(dateGenerator: @escaping DateGenerator) {
-        self.dateInstalled = dateGenerator()
-        self.dateGenerator = dateGenerator
-        self.durationInDays = TrialPeriod.defaultDuration
-    }
-}
-
 class TrialPeriodTests: XCTestCase {
 
     var date: Date!
@@ -53,13 +31,31 @@ class TrialPeriodTests: XCTestCase {
         XCTAssertEqual(date, trial.dateInstalled)
     }
 
-    func testDefaultDurationIs7Days() {
+    func testTrialPeriodDefaultDurationIs7Days() {
         XCTAssertEqual(7, trial.durationInDays)
     }
     
-    func testDateExpiredIs7DaysAfterInstallDate() {
+    func testTrialPeriodDateExpiredIs7DaysAfterInstallDate() {
         let expected = Calendar.current.date(byAdding: .day, value: 7, to: date)
         XCTAssertEqual(expected, trial.dateExpired)
     }
+    
+    func testTrialPeriodNotExpiredOnStart() {
+        XCTAssertFalse(trial.isExpired())
+    }
+    
+    func testTrialPeriodExpiredAfter7Days() {
+        timeTraveler.timeTravelBy(days: 7)
+        
+        XCTAssertTrue(trial.isExpired())
+    }
+
+    // Test with more confidence (try changing the duration)
+    //    func testTrialExpiresAfter21Days()
+
+    // Test new functions like reset()
+    //    func testResetChangesDateToCurrentTime()
+
+    // Try the Code Kata Challenges to test time logic
     
 }
