@@ -8,7 +8,7 @@
 
 import Foundation
 
-// John Sundell
+// John Sundell: https://www.swiftbysundell.com/posts/time-traveling-in-swift-unit-tests
 
 class TimeTraveler {
     var date: Date
